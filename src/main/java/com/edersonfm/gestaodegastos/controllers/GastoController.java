@@ -21,17 +21,18 @@ public class GastoController {
            gastoService.insertGasto(gasto);
     }
     
-    @GetMapping("/listagem/{codigoUsuario}")
-    public  @ResponseBody Optional<Gasto> findById(@PathVariable("codigoUsuario") String codigoUsuario) {
-           
-            return  gastoService.findByDate(codigoUsuario);
-    }
-    
-    @GetMapping("/find-by-date/{date}")
-    public  @ResponseBody Optional<Gasto> findByDate(@PathVariable("date") String date) {
-           
-            return  gastoService.findByDate(date);
-           
-    }
+	/*
+	 * @GetMapping("/listagem/{codigoUsuario}") public @ResponseBody Optional<Gasto>
+	 * findById(@PathVariable("codigoUsuario") String codigoUsuario) {
+	 * 
+	 * return gastoService.findByDate(codigoUsuario); }
+	 * 
+	 * @GetMapping("/find-by-date/{date}") public @ResponseBody Optional<Gasto>
+	 * findByDate(@PathVariable("date") String date) {
+	 * 
+	 * return gastoService.findByDate(date);
+	 * 
+	 * }
+	 */
 
 }
