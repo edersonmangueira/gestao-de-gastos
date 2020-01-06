@@ -4,11 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.edersonfm.gestaodegastos.model.Gasto;
 import com.edersonfm.gestaodegastos.services.GastoService;
 
-@Controller
+@RestController
+@RequestMapping("/gestao")
 public class GastoController {
 
 	@Autowired
