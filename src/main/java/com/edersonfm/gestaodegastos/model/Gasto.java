@@ -10,17 +10,18 @@ public class Gasto implements Serializable{
 	String dataGasto;
 	TipoGasto tipoGasto;
 	String descricao;
-	double valor;
+//	double valor;
 	Integer codigoUsuario;
 	
-	public Gasto(String id, String dataGasto, TipoGasto tipoGasto, String descricao, double valor,
+	public Gasto(String id, String dataGasto, TipoGasto tipoGasto, String descricao, 
+//			double valor,
 			Integer codigoUsuario) {
 		super();
 		this.id = id;
 		this.dataGasto = dataGasto;
 		this.tipoGasto = tipoGasto;
 		this.descricao = descricao;
-		this.valor = valor;
+//		this.valor = valor;
 		this.codigoUsuario = codigoUsuario;
 	}
 	public String getId() {
@@ -47,12 +48,12 @@ public class Gasto implements Serializable{
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public double getValor() {
-		return valor;
-	}
-	public void setValor(double valor) {
-		this.valor = valor;
-	}
+//	public double getValor() {
+//		return valor;
+//	}
+//	public void setValor(double valor) {
+//		this.valor = valor;
+//	}
 	public Integer getCodigoUsuario() {
 		return codigoUsuario;
 	}
@@ -62,7 +63,8 @@ public class Gasto implements Serializable{
 	@Override
 	public String toString() {
 		return "Gasto [id=" + id + ", dataGasto=" + dataGasto + ", tipoGasto=" + tipoGasto + ", descricao=" + descricao
-				+ ", valor=" + valor + ", codigoUsuario=" + codigoUsuario + "]";
+//				+ ", valor=" + valor + ", "
+						+ "codigoUsuario=" + codigoUsuario + "]";
 	}
 	
 }
