@@ -6,30 +6,34 @@ import com.edersonfm.gestaodegastos.model.enuns.TipoGasto;
 
 public class Gasto implements Serializable{
 	
-	String id;
+	Integer codigoUsuario;
+//	String id;
 	String dataGasto;
 	TipoGasto tipoGasto;
 	String descricao;
-//	double valor;
-	Integer codigoUsuario;
+	double valor;
+
 	
-	public Gasto(String id, String dataGasto, TipoGasto tipoGasto, String descricao, 
-//			double valor,
+	public Gasto(
+//			String id, 
+			String dataGasto, TipoGasto tipoGasto, String descricao, 
+			double valor,
 			Integer codigoUsuario) {
 		super();
-		this.id = id;
+//		this.id = id;
+		this.codigoUsuario = codigoUsuario;		
 		this.dataGasto = dataGasto;
 		this.tipoGasto = tipoGasto;
 		this.descricao = descricao;
-//		this.valor = valor;
-		this.codigoUsuario = codigoUsuario;
+		this.valor = valor;
+
 	}
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
+//	public String getId() {
+//		return id;
+//	}
+//	public void setId(String id) {
+//		this.id = id;
+//	}
 	public String getDataGasto() {
 		return dataGasto;
 	}
@@ -48,12 +52,12 @@ public class Gasto implements Serializable{
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-//	public double getValor() {
-//		return valor;
-//	}
-//	public void setValor(double valor) {
-//		this.valor = valor;
-//	}
+	public double getValor() {
+		return valor;
+	}
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
 	public Integer getCodigoUsuario() {
 		return codigoUsuario;
 	}
@@ -62,8 +66,10 @@ public class Gasto implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "Gasto [id=" + id + ", dataGasto=" + dataGasto + ", tipoGasto=" + tipoGasto + ", descricao=" + descricao
-//				+ ", valor=" + valor + ", "
+		return "Gasto [ "
+//				+ "id=" + id + ", "
+				+ "dataGasto=" + dataGasto + ", tipoGasto=" + tipoGasto + ", descricao=" + descricao
+				+ ", valor=" + valor + ", "
 						+ "codigoUsuario=" + codigoUsuario + "]";
 	}
 	

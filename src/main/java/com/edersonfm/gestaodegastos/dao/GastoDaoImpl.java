@@ -24,7 +24,14 @@ public class GastoDaoImpl implements GastoDaoInterface {
 	@Override
 	public void save(Gasto gasto) {
 
-		hashOperations.put("GASTO", gasto.getId(), gasto);
+		hashOperations.put("GASTO", gasto.getCodigoUsuario(), gasto);
+	}
+	
+	@Override
+	public Gasto findAll(Integer codigoUsuario) {
+		
+		return (Gasto) hashOperations.get("GASTO", codigoUsuario);
+		
 	}
 
 }

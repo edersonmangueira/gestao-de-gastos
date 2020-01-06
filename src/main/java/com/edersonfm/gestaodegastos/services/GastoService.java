@@ -36,17 +36,17 @@ public class GastoService {
 //
 //	}
 //
-//	public Optional<Gasto> findById(String codigoUsuario) {
-//
-//		try {
-//
-//			return gastoDao.findById(codigoUsuario);
-//
-//		} catch (Exception e) {
-//			log.error(e.getMessage());
-//		}
-//		return null;
-//
-//	}
+	public Gasto findById(Integer codigoUsuario) {
+
+		try {
+
+			return gastoDao.findAll(codigoUsuario);
+
+		} catch (Exception e) {
+			log.error(e.getMessage());
+		}
+		return null;
+
+	}
 
 }
