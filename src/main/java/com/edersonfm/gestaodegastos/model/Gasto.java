@@ -6,7 +6,7 @@ import com.edersonfm.gestaodegastos.model.enuns.TipoGasto;
 
 public class Gasto implements Serializable{
 	
-	Integer codigoUsuario;
+	String codigoUsuario;
 //	String id;
 	String dataGasto;
 	TipoGasto tipoGasto;
@@ -18,7 +18,7 @@ public class Gasto implements Serializable{
 //			String id, 
 			String dataGasto, TipoGasto tipoGasto, String descricao, 
 			double valor,
-			Integer codigoUsuario) {
+			String codigoUsuario) {
 		super();
 //		this.id = id;
 		this.codigoUsuario = codigoUsuario;		
@@ -58,10 +58,10 @@ public class Gasto implements Serializable{
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
-	public Integer getCodigoUsuario() {
+	public String getCodigoUsuario() {
 		return codigoUsuario;
 	}
-	public void setCodigoUsuario(Integer codigoUsuario) {
+	public void setCodigoUsuario(String codigoUsuario) {
 		this.codigoUsuario = codigoUsuario;
 	}
 	@Override

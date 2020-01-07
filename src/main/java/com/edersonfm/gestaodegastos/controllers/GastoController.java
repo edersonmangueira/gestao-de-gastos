@@ -1,6 +1,6 @@
 package com.edersonfm.gestaodegastos.controllers;
 
-import java.util.Optional;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,16 +28,16 @@ public class GastoController {
 	}
 
 	@GetMapping("/listagem/{codigoUsuario}")
-	public @ResponseBody Gasto findById(@PathVariable("codigoUsuario") Integer codigoUsuario) {
+	public @ResponseBody Gasto findById(@PathVariable("codigoUsuario") String codigoUsuario) {
 
 		return gastoService.findById(codigoUsuario);
 	}
-//	  
-//	  @GetMapping("/find-by-date/{date}") public @ResponseBody Optional<Gasto>
-//	  findByDate(@PathVariable("date") String date) {
-//	  
-//	  return gastoService.findByDate(date);
-//	  
-//	  }
+
+	@GetMapping("/gastos")
+	@ResponseBody
+	public Map<String, Gasto> findByDate() {
+
+		return gastoService.findAll();
+	}
 
 }

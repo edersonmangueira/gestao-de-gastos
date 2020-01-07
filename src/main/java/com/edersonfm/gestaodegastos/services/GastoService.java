@@ -1,6 +1,6 @@
 package com.edersonfm.gestaodegastos.services;
 
-import java.util.Optional;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,24 +23,24 @@ public class GastoService {
 		gastoDao.save(gasto);
 	}
 
-//	public Optional<Gasto> findByDate(String date) {
-//
-//		try {
-//
-//			return gastoDao.findById(date);
-//
-//		} catch (Exception e) {
-//			log.error(e.getMessage());
-//		}
-//		return null;
-//
-//	}
-//
-	public Gasto findById(Integer codigoUsuario) {
+	public Map<String, Gasto> findAll() {
 
 		try {
 
-			return gastoDao.findAll(codigoUsuario);
+			return gastoDao.findAll();
+
+		} catch (Exception e) {
+			log.error(e.getMessage());
+		}
+		return null;
+
+	}
+
+	public Gasto findById(String codigoUsuario) {
+
+		try {
+
+			return gastoDao.findById(codigoUsuario);
 
 		} catch (Exception e) {
 			log.error(e.getMessage());

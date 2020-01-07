@@ -1,6 +1,6 @@
 package com.edersonfm.gestaodegastos.dao;
 
-import java.util.Optional;
+import java.util.Map;
 
 import com.edersonfm.gestaodegastos.model.Gasto;
 
@@ -8,5 +8,7 @@ public interface GastoDaoInterface{
 	
 	void save(Gasto gasto);
 	
-	Gasto findAll(Integer codigoUsuario);
+	Gasto findById(String codigoUsuario);
+	
+	Map<String, Gasto> findAll();
 }

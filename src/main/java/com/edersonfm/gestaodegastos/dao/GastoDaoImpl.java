@@ -1,5 +1,7 @@
 package com.edersonfm.gestaodegastos.dao;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -28,10 +30,15 @@ public class GastoDaoImpl implements GastoDaoInterface {
 	}
 	
 	@Override
-	public Gasto findAll(Integer codigoUsuario) {
+	public Gasto findById(String codigoUsuario) {
 		
 		return (Gasto) hashOperations.get("GASTO", codigoUsuario);
+	}
+	
+	@Override
+	public Map<String, Gasto> findAll(){
 		
+		return hashOperations.entries("GASTO");
 	}
 
 }
